@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Oct  1 11:52:50 2021
+# Process ID: 6120
+# Current directory: C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3548 C:\Users\deshr\OneDrive\Desktop\Mini Project Final\Image_Processing_Final\Image_Processing_Final.xpr
+# Log file: C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/vivado.log
+# Journal file: C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.xpr}
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+close_hw_manager
+close_project
+create_project project_1 {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_1} -part xc7a35tcpg236-1
+close_project
+create_project project_2 {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2} -part xc7a35tcpg236-1
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/sources_1/new
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/sources_1/new
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/sources_1/new
+file mkdir {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/sources_1/new}
+close [ open {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/sources_1/new/Half_Adder.v} w ]
+add_files {{C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/sources_1/new/Half_Adder.v}}
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+place_ports a W16
+place_ports b V16
+place_ports c U19
+place_ports s E19
+file mkdir {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/constrs_1/new}
+close [ open {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/constrs_1/new/cnstr1.xdc} w ]
+add_files -fileset constrs_1 {{C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/constrs_1/new/cnstr1.xdc}}
+set_property target_constrs_file {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/project_2/project_2.srcs/constrs_1/new/cnstr1.xdc} [current_fileset -constrset]
+save_constraints -force
+set_property IOSTANDARD LVCMOS33 [get_ports [list a]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list b]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list c]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list s]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag

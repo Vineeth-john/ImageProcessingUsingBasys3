@@ -1,0 +1,85 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Oct  1 10:59:41 2021
+# Process ID: 11468
+# Current directory: C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9236 C:\Users\deshr\OneDrive\Desktop\Mini Project Final\Image_Processing_Final\Image_Processing_Final.xpr
+# Log file: C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/vivado.log
+# Journal file: C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source Image_Processing_Final.tcl
+reset_run blk_mem_gen_0_synth_1
+launch_runs blk_mem_gen_0_synth_1
+wait_on_run blk_mem_gen_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new
+file mkdir C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1
+file mkdir {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new}
+close [ open {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new/constr1.xdc} w ]
+add_files -fileset constrs_1 {{C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new/constr1.xdc}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new/constr1.xdc}}] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 {{C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new/constr1.xdc}}
+place_ports {blue[3]} J18
+place_ports {blue[2]} K18
+place_ports {blue[1]} L18
+place_ports {blue[0]} N18
+set_property IOSTANDARD LVCMOS33 [get_ports [list {blue[3]} {blue[2]} {blue[1]} {blue[0]}]]
+place_ports {green[3]} D17
+place_ports {green[2]} G17
+place_ports {green[1]} H17
+place_ports {green[0]} J17
+set_property IOSTANDARD LVCMOS33 [get_ports [list {green[3]} {green[2]} {green[1]} {green[0]}]]
+place_ports {red[3]} N19
+place_ports {red[2]} J19
+place_ports {red[1]} H19
+place_ports {red[0]} G19
+set_property IOSTANDARD LVCMOS33 [get_ports [list {red[3]} {red[2]} {red[1]} {red[0]}]]
+place_ports {sel_module[3]} W15
+place_ports {sel_module[2]} W17
+place_ports {sel_module[1]} W16
+place_ports {sel_module[0]} V16
+set_property IOSTANDARD LVCMOS33 [get_ports [list {sel_module[3]} {sel_module[2]} {sel_module[1]} {sel_module[0]}]]
+place_ports {val[7]} U1
+place_ports {val[6]} W2
+place_ports {val[5]} R3
+place_ports {val[4]} T2
+place_ports {val[3]} T3
+place_ports {val[2]} V2
+place_ports {val[1]} W13
+place_ports {val[0]} W14
+set_property IOSTANDARD LVCMOS33 [get_ports [list {val[7]} {val[6]} {val[5]} {val[4]} {val[3]} {val[2]} {val[1]} {val[0]}]]
+place_ports clock W5
+place_ports hsync P19
+place_ports reset V17
+place_ports vsync R19
+set_property IOSTANDARD LVCMOS33 [get_ports [list clock]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list hsync]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list reset]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list vsync]]
+close [ open {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new/cnstr1.xdc} w ]
+add_files -fileset constrs_1 {{C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new/cnstr1.xdc}}
+set_property target_constrs_file {C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.srcs/constrs_1/new/cnstr1.xdc} [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+open_run impl_1
+close_sim

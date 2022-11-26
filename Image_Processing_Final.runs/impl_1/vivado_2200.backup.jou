@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Oct  1 11:18:27 2021
+# Process ID: 2200
+# Current directory: C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.runs/impl_1
+# Command line: vivado.exe -log Image_Processing_Final.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Image_Processing_Final.tcl -notrace
+# Log file: C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.runs/impl_1/Image_Processing_Final.vdi
+# Journal file: C:/Users/deshr/OneDrive/Desktop/Mini Project Final/Image_Processing_Final/Image_Processing_Final.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Image_Processing_Final.tcl -notrace
